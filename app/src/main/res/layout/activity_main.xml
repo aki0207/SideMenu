@@ -2,20 +2,46 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <Button
-            android:id="@+id/open_button"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Open!" />
+            android:background="#0000ff"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/open_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/side_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019年○月×日"
+                android:textColor="#ff7f50"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
     </LinearLayout>
 
 
     <!-- サイドメニュー -->
-    <include layout="@layout/side_menu" android:id="@+id/footer_views"/>
+    <include
+        android:id="@+id/footer_views"
+        layout="@layout/side_menu" />
 
 </android.support.v4.widget.DrawerLayout>
